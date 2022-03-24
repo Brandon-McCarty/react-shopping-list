@@ -36,6 +36,7 @@ function App() {
 
                 <ItemList 
                     itemList={itemList}
+                    // deleteItem={deleteItem}
                 />
 
                 

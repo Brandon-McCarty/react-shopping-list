@@ -2,7 +2,12 @@ function ItemList ({itemList}) {
     return (
         <>
             <ul>
-                <li>itemList</li>
+                <li>{itemList.map(item => 
+                    <Item 
+                        key={item.id}
+                        item={item}
+                    />
+                    )}</li>
             </ul>
         </>
     )
