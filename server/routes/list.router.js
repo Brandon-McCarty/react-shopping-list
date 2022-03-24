@@ -36,6 +36,26 @@ router.delete('/:id', (req, res) => {
 
 })
 
+// PUT items
+router.put('/:id', (req, res) => {
+    let id = req.params.id;
+    console.log('Need to update: ', id);
+    
+    const queryText = `
+        UPDATE "list"
+        SET "purchased" = NOT "purchased"
+        WHERE "id" = $1
+    `;
+
+    pool.query(queryText, [id])
+        .then(result => {
+            res.sendStatus(200);
+        }).catch(err => {
+            console.log(err);
+        });
+
+});
+
 router.post('/', (req, res) => {
     const item = req.body;
     const queryText = `INSERT INTO list (item, quantity, unit)

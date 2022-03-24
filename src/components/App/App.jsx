@@ -37,7 +37,14 @@ function App() {
     }
 
     const updateItem = (itemToUpdate) => {
-        console.log('Update from App.jsx')
+        console.log('Update from App.jsx');
+        axios.put(`/list/${itemToUpdate.id}`)
+        .then(response => {
+            getItems();
+            console.log('Updated', itemToUpdate)
+        }).catch(err => {
+            console.log('Error in update', err);
+        })
 
     }
     console.log(itemList);
