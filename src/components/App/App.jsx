@@ -3,6 +3,7 @@ import React from 'react';
 import axios from 'axios';
 import Header from '../Header/Header.jsx'
 import './App.css';
+import ItemList from '../ItemList/ItemList.jsx';
 
 
 function App() {
@@ -44,12 +45,13 @@ function App() {
                 <ListForm />
                 </div> */}
 
-                {/* <div>
-                <List />
-                </div> */}
+                <ItemList 
+                    itemList={itemList}
+                    deleteItem={deleteItem}
+                />
 
                 
-                <p>Under Construction...</p>
+                
             </main>
         </div>
     );
