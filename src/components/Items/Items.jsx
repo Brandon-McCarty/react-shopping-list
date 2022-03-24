@@ -8,7 +8,7 @@ function Items({item, deleteItem}) {
 
     return (
         <>
-        <li>Item Name: {item.name} | Amount: {item.quantity} {item.unit} 
+        <li>Item Name: {item.item} | Amount: {item.quantity} {item.unit} 
         <span><button onClick={(event) => {handlePurchase}}>Buy</button></span>
         <span><button onClick={(event) => {deleteItem(item)}}>Delete</button></span>
         </li>
