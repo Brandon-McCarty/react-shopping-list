@@ -31,7 +31,7 @@ function App() {
             <main>
                 {/* Will need component links for Form & List (Item will be linked to List) */}
                 <div>
-                <ItemForm />
+                <ItemForm getItems={getItems}/>
                 </div>
 
                 {/* <div>
@@ -46,3 +46,4 @@ function App() {
 }
 
 export default App;
+

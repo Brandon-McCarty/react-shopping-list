@@ -13,7 +13,7 @@ function ItemForm ({getItems}) {
 
         event.preventDefault();
 
-        axios.post('/list', { name: newItemName, quantity: newItemQuantity, unit: newItemUnit})
+        axios.post('/list', { item: newItemName, quantity: newItemQuantity, unit: newItemUnit})
         .then((response) => {
             console.log('form post response', response);
             getItems();

@@ -18,4 +18,21 @@ router.get('/', (req, res) => {
     })
 })
 
+router.post('/', (req, res) => {
+    const item = req.body;
+    const queryText = `INSERT INTO list (item, quantity, unit)
+                        VALUES ($1, $2, $3)`;
+    // Let sql sanitize your inputs (NO Bobby Drop Tables here!)
+    // the $1, $2, etc get substituted with the values from the array below
+    pool.query(queryText, [item.item, item.quantity, item.unit])
+        .then((result) => {
+            console.log(`Added item to the database`, item);
+            res.sendStatus(201);
+        })
+        .catch((error) => {
+            console.log(`Error making database query ${queryText}`, error);
+            res.sendStatus(500); // Good server always responds
+        })
+})
+
 module.exports = router;
