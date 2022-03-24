@@ -26,10 +26,10 @@ function App() {
     }
 
     const deleteItem = (itemToDelete) => {
-        console.log('Delete from App.jsx').
+        console.log('Delete from App.jsx')
         axios.delete(`/list/${itemToDelete.id}`)
         .then(response => {
-            //getItems
+            getItems();
             console.log('successful delete: ', response);
         }).catch(err => {
             console.log('error in delete from App.jsx: ', err);
