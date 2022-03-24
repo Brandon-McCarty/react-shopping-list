@@ -2,6 +2,7 @@ import {useState, useEffect} from 'react';
 import React from 'react';
 import axios from 'axios';
 import Header from '../Header/Header.jsx'
+import ItemForm from '../ItemForm/ItemForm'
 import './App.css';
 
 
@@ -29,9 +30,9 @@ function App() {
             <Header />
             <main>
                 {/* Will need component links for Form & List (Item will be linked to List) */}
-                {/* <div>
-                <ListForm />
-                </div> */}
+                <div>
+                <ItemForm />
+                </div>
 
                 {/* <div>
                 <List />
