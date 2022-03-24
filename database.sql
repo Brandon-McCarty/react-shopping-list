@@ -1,2 +1,7 @@
--- Don't forget to add your create table SQL 
--- It is also helpful to include some test data
+CREATE TABLE "list" (
+"id" SERIAL PRIMARY KEY,
+"item" VARCHAR(80),
+"quantity" FLOAT,
+"unit" VARCHAR(20),
+"purchased" BOOLEAN DEFAULT FALSE
+);
