@@ -7,13 +7,37 @@ import './App.css';
 
 function App() {
 
+    const [itemList, setItemList] = useState([]);
 
+    useEffect(() => {
+        getItems();
+    }, []);
 
+    const getItems = () => {
+        axios.get('/list')
+        .then(response => {
+            setItemList(response.data);
+        })
+        . catch(err => {
+            console.log('Error in get on App side: ', err);
+        })
+    }
+
+    console.log(itemList);
     return (
         <div className="App">
             <Header />
             <main>
                 {/* Will need component links for Form & List (Item will be linked to List) */}
+                {/* <div>
+                <ListForm />
+                </div> */}
+
+                {/* <div>
+                <List />
+                </div> */}
+
+                
                 <p>Under Construction...</p>
             </main>
         </div>
