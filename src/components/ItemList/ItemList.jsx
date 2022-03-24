@@ -1,16 +1,20 @@
-function ItemList ({itemList}) {
+import Item from '../Items/Items'
+
+function ItemList({ itemList, deleteItem }) {
     return (
         <>
             <ul>
-                <li>{itemList.map(item => 
-                    <Item 
+                {itemList.map(item =>
+                // Items rendered from Items component
+                    <Items
                         key={item.id}
                         item={item}
+                        deleteItem={deleteItem}
                     />
-                    )}</li>
+                )}
             </ul>
         </>
     )
-}
+}; 
 
 export default ItemList;
