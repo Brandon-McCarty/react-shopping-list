@@ -36,6 +36,10 @@ function App() {
         })
     }
 
+    const updateItem = (itemToUpdate) => {
+        console.log('Update from App.jsx')
+
+    }
     console.log(itemList);
     return (
         <div className="App">
@@ -49,6 +53,7 @@ function App() {
                 <ItemList 
                     itemList={itemList}
                     deleteItem={deleteItem}
+                    updateItem={updateItem}
                 />
 
                 

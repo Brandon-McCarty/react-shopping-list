@@ -1,6 +1,6 @@
 import Items from '../Items/Items'
 
-function ItemList({ itemList, deleteItem }) {
+function ItemList({ itemList, deleteItem, updateItem }) {
     return (
         <>
             <ul>
@@ -10,6 +10,7 @@ function ItemList({ itemList, deleteItem }) {
                         key={item.id}
                         item={item}
                         deleteItem={deleteItem}
+                        updateItem={updateItem}
                     />
                 )}
             </ul>
