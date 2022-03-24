@@ -1,4 +1,4 @@
-import Item from '../Items/Items'
+import Items from '../Items/Items'
 
 function ItemList({ itemList, deleteItem }) {
     return (
