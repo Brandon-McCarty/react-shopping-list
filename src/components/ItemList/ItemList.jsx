@@ -1,6 +1,7 @@
 import Items from '../Items/Items'
 
 function ItemList({ itemList, deleteItem, updateItem }) {
+
    const deleteLoop = () => {
         for (let item of itemList) {
             // console.log('items to delete: ', item)
@@ -8,9 +9,18 @@ function ItemList({ itemList, deleteItem, updateItem }) {
         }
     }
 
+    const updateLoop = () => {
+        for (let item of itemList) {
+            if (item.purchased === true) {
+                updateItem(item);
+            }
+        }
+    }
+
     return (
         <>
         <h1>Shopping List</h1>
+        <button onClick={updateLoop}>Reset</button>
         <button onClick={deleteLoop}>Clear</button>
             <ul>
                 {itemList.map(item =>
@@ -20,9 +30,7 @@ function ItemList({ itemList, deleteItem, updateItem }) {
                         item={item}
                         deleteItem={deleteItem}
                         updateItem={updateItem}
-                    />
-
-                   
+                    />              
                 )}
             </ul>
             
