@@ -40,7 +40,7 @@ router.delete('/:id', (req, res) => {
 router.put('/:id', (req, res) => {
     let id = req.params.id;
     console.log('Need to update: ', id);
-    
+
     const queryText = `
         UPDATE "list"
         SET "purchased" = NOT "purchased"
