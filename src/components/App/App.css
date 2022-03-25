@@ -1,4 +1,51 @@
+body {
+
+  background: repeating-linear-gradient(
+  to bottom,
+  cornsilk,
+  cornsilk 98%,
+  gold 2%,
+  gold
+);
+
+background-size: 100% 20px;
+}
+
 main {
   width: 90%;
   margin: auto;
+}
+
+.form {
+  display: inline-block;
+}
+
+.itemContainer {
+  border: 1px solid black;
+  border-radius: 10px;
+  background-color: #599EA6;
+  padding: 10px;
+  text-align: center;
+  margin: 20px;
+  width: 200px;
+  height: 100px;
+}
+
+.list {
+  align-items: flex-start;
+  display: flex;
+  margin: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  /* width: 800px;
+  height: 400px; */
+}
+
+button {
+  margin: 4px;
+}
+
+.itemMargin {
+  margin-bottom: 20px;
 }

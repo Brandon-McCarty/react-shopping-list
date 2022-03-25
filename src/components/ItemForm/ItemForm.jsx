@@ -28,18 +28,28 @@ function ItemForm ({getItems}) {
 
     return (
        <> 
-         <div align = "center">
+         <div align = "left" className="form" >
+            <h2>Add an Item:</h2>
+
                 <form onSubmit={handleSubmit}>
-                <input type="text" placeholder="Item Name"
-                onChange={(event) => setNewItemName(event.target.value)}
-                value={newItemName}/>
-                <input type="number" placeholder="Item Quantity"
-                onChange={(event) => setNewItemQuantity(event.target.value)}
-                value={newItemQuantity}/>
-                <input type="text" placeholder="Item Unit"
-                onChange={(event) => setNewItemUnit(event.target.value)}
-                value={newItemUnit}/>
-                <button type="submit">Add Item</button>
+                    
+                    <label htmlFor="item"> Item Name: </label>
+                    <input id="item" type="text" placeholder="Item Name"
+                    onChange={(event) => setNewItemName(event.target.value)}
+                    value={newItemName}/>
+                    
+                    <label htmlFor="qty"> Quantity: </label>
+                    <input id="qty" type="number" placeholder="Item Quantity"
+                    onChange={(event) => setNewItemQuantity(event.target.value)}
+                    value={newItemQuantity}/>
+                    
+
+                    <label htmlFor="unit"> Unit: </label>
+                    <input id="unit" type="text" placeholder="Item Unit"
+                    onChange={(event) => setNewItemUnit(event.target.value)}
+                    value={newItemUnit}/>
+
+                    <button type="submit">Add Item</button>
              </form>
          </div>
         </>

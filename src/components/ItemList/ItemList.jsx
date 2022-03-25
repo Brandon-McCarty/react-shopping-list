@@ -19,10 +19,10 @@ function ItemList({ itemList, deleteItem, updateItem }) {
 
     return (
         <>
-        <h1>Shopping List</h1>
+        <h2>Shopping List</h2>
         <button onClick={updateLoop}>Reset</button>
         <button onClick={deleteLoop}>Clear</button>
-            <ul>
+            <div className="list"> 
                 {itemList.map(item =>
                 // Items rendered from Items component
                     <Items
@@ -30,10 +30,10 @@ function ItemList({ itemList, deleteItem, updateItem }) {
                         item={item}
                         deleteItem={deleteItem}
                         updateItem={updateItem}
-                    />              
-                )}
-            </ul>
-            
+                    /> 
+                               
+                )} 
+            </div>
         </>
     )
 }; 
