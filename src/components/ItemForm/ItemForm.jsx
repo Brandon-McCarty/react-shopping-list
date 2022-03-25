@@ -5,7 +5,7 @@ function ItemForm({ getItems }) {
 
     //state values for item object properties
     const [newItemName, setNewItemName] = useState('');
-    const [newItemQuantity, setNewItemQuantity] = useState(0);
+    const [newItemQuantity, setNewItemQuantity] = useState('');
     const [newItemUnit, setNewItemUnit] = useState('');
 
     //function to add new item on click of add item
