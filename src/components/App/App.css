@@ -49,3 +49,15 @@ button {
 .itemMargin {
   margin-bottom: 20px;
 }
+
+.purchased {
+  background-color: darkgray;
+  color: gray;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  margin: 20px;
+  width: 200px;
+  height: 100px;
+}
